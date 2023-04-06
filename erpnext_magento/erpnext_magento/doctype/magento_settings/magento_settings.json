@@ -1,0 +1,247 @@
+{
+ "creation": "2015-05-18 05:21:07.270859",
+ "doctype": "DocType",
+ "document_type": "System",
+ "engine": "InnoDB",
+ "field_order": [
+  "status_html",
+  "enable_magento",
+  "column_break_4",
+  "last_sync_datetime",
+  "section_break_2",
+  "magento_url",
+  "column_break_3",
+  "api_access_token",
+  "erp_settings",
+  "customer_group",
+  "column_break_8",
+  "item_group",
+  "item_variant_attributes_section_break",
+  "item_variant_attributes_html",
+  "item_variant_attributes",
+  "section_break",
+  "default_price_list",
+  "price_lists_html",
+  "price_lists",
+  "company_dependent_settings",
+  "company",
+  "cost_center",
+  "column_break_20",
+  "cash_bank_account",
+  "section_break_22",
+  "html_16",
+  "taxes",
+  "section_break_25",
+  "sales_order_series",
+  "column_break_27",
+  "sync_delivery_note",
+  "delivery_note_series",
+  "sync_sales_invoice",
+  "sales_invoice_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "status_html",
+   "fieldtype": "HTML",
+   "label": "status html",
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_magento",
+   "fieldtype": "Check",
+   "label": "Enable Magento"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_sync_datetime",
+   "fieldtype": "Datetime",
+   "label": "Last Sync Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "eg: https://www.my-shop.com",
+   "fieldname": "magento_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "erp_settings",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Customer Group will set to selected group while syncing customers from Magento.",
+   "fieldname": "customer_group",
+   "fieldtype": "Link",
+   "label": "ERPNext Customer Group",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "company_dependent_settings",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "description": "Cash Account will used for Sales Invoice creation",
+   "fieldname": "cash_bank_account",
+   "fieldtype": "Link",
+   "label": "Cash/Bank Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "html_16",
+   "fieldtype": "HTML",
+   "options": "Map Magento Tax / Shipping to ERPNext Account"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Magento Tax Account",
+   "options": "Magento Tax Account"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_order_series",
+   "fieldtype": "Select",
+   "label": "Sales Order Series"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sync_delivery_note",
+   "fieldtype": "Check",
+   "label": "Import Delivery Notes from Magento on Shipment"
+  },
+  {
+   "depends_on": "eval:doc.sync_delivery_note==1",
+   "fieldname": "delivery_note_series",
+   "fieldtype": "Select",
+   "label": "Delivery Note Series"
+  },
+  {
+   "default": "0",
+   "fieldname": "sync_sales_invoice",
+   "fieldtype": "Check",
+   "label": "Import Sales Invoice from Magento if Payment is marked"
+  },
+  {
+   "depends_on": "eval:doc.sync_sales_invoice==1",
+   "fieldname": "sales_invoice_series",
+   "fieldtype": "Select",
+   "label": "Sales Invoice Series"
+  },
+  {
+   "fieldname": "price_lists",
+   "fieldtype": "Table",
+   "options": "Magento Price List"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "api_access_token",
+   "fieldtype": "Data",
+   "label": "API Access Token",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break",
+   "fieldtype": "Section Break",
+   "label": "Price Lists"
+  },
+  {
+   "description": "Item Group will set to selected group while syncing items from Magento.",
+   "fieldname": "item_group",
+   "fieldtype": "Link",
+   "label": "ERPNext Item Group",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "item_variant_attributes_section_break",
+   "fieldtype": "Section Break",
+   "label": "Item Variant Attributes"
+  },
+  {
+   "fieldname": "item_variant_attributes_html",
+   "fieldtype": "HTML",
+   "options": "Define which item attributes have to be synced. All attributes which are used to define item variants have to be synced. The attributes have to have the same name in ERPNext an Magento. Rename has to be done manually in both systems."
+  },
+  {
+   "fieldname": "item_variant_attributes",
+   "fieldtype": "Table",
+   "options": "Magento Settings Item Variant Attribute"
+  },
+  {
+   "description": "Prices from this price list are set as default price in Magento.",
+   "fieldname": "default_price_list",
+   "fieldtype": "Link",
+   "label": "Default Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "price_lists_html",
+   "fieldtype": "HTML",
+   "label": "Map Websites and Price Lists",
+   "options": "Map Magento Website to ERPNext Price List"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2020-04-28 09:51:24.372739",
+ "modified_by": "Administrator",
+ "module": "ERPNext Magento",
+ "name": "Magento Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

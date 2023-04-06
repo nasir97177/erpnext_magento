@@ -1,0 +1,29 @@
+{
+ "creation": "2020-04-08 12:45:22.240411",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "magento_category_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "magento_category_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Categorie Name",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-06-19 13:48:34.086156",
+ "modified_by": "Administrator",
+ "module": "ERPNext Magento",
+ "name": "Magento Categories",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

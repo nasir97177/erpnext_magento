@@ -1,0 +1,40 @@
+{
+ "creation": "2015-10-05 16:55:20.455371",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "magento_tax",
+  "column_break_2",
+  "tax_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "magento_tax",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Magento Tax/Shipping Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "ERPNext Account",
+   "options": "Account",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-04-28 09:50:01.226348",
+ "modified_by": "Administrator",
+ "module": "ERPNext Magento",
+ "name": "Magento Tax Account",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
